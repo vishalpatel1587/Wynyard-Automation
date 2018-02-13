@@ -1,0 +1,1199 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<reports>
+	<report>
+
+
+
+
+		<!-- ======================== -->
+		<!--       Phone Book         -->
+		<!-- ======================== -->
+		<contacts>
+			<md5>6E3A7724BC839AAA0869668F0CC4EE6C</md5>
+			<sha256>1D61686BD53E23D3AD0EF41A637098440F9E1FBF5617691E911E05F175BF600D</sha256>
+			<count>11</count>
+			<contact>
+				<id>1</id>
+				<name>Message Bank </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>101</value>
+				</phone_number>
+			</contact>
+			<contact>
+				<id>2</id>
+				<name>Sensis1234 </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>1234</value>
+				</phone_number>
+			</contact>
+			<contact>
+				<id>3</id>
+				<name>Int'l Msgbank Svc </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>#101#</value>
+				</phone_number>
+			</contact>
+			<contact>
+				<id>4</id>
+				<name>Int'l Message Bank </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>#101#</value>
+				</phone_number>
+			</contact>
+			<contact>
+				<id>5</id>
+				<name>
+				</name>
+				<memory>Phone</memory>
+				<extra_field>
+					<designation>Email</designation>
+					<value>deitestuser2@gmail.com</value>
+				</extra_field>
+			</contact>
+			<contact>
+				<id>6</id>
+				<name>Vasylchenko Olga </name>
+				<memory>Phone</memory>
+				<extra_field>
+					<designation>Email</designation>
+					<value>ovasylchenko@wynyardgroup.com</value>
+				</extra_field>
+			</contact>
+			<contact>
+				<id>7</id>
+				<name>Customer Service </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>777</value>
+				</phone_number>
+			</contact>
+			<contact>
+				<id>8</id>
+				<name>Private </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>6666663322</value>
+				</phone_number>
+				<extra_field>
+					<designation>Email Home</designation>
+					<value>112345</value>
+				</extra_field>
+				<extra_field>
+					<designation>Company</designation>
+					<value>Private Company</value>
+				</extra_field>
+			</contact>
+			<contact>
+				<id>9</id>
+				<name>White Anna </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>22222223</value>
+				</phone_number>
+				<extra_field>
+					<designation>Email Home</designation>
+					<value>56565664</value>
+				</extra_field>
+				<extra_field>
+					<designation>Address</designation>
+					<value>
+						<street>156 Long Avenue</street>
+						<city>Greentown</city>
+						<state>Texas</state>
+						<zipcode>1232</zipcode>
+						<country>USA</country>
+					</value>
+				</extra_field>
+			</contact>
+			<contact>
+				<id>10</id>
+				<name>Walker Lewis </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>027 517 6265</value>
+				</phone_number>
+				<extra_field>
+					<designation>Email Home</designation>
+					<value>1234567</value>
+				</extra_field>
+				<extra_field>
+					<designation>Address</designation>
+					<value>
+						<street>89 Johnson Street</street>
+						<city>Los Angeles</city>
+						<state>California</state>
+						<zipcode>9087</zipcode>
+						<country>USA</country>
+					</value>
+				</extra_field>
+				<extra_field>
+					<designation>Company</designation>
+					<value>Wynyard</value>
+				</extra_field>
+			</contact>
+			<contact>
+				<id>11</id>
+				<name>Dawson Leigh </name>
+				<memory>Phone</memory>
+				<phone_number>
+					<designation>Mobile</designation>
+					<value>0274 500 824</value>
+				</phone_number>
+			</contact>
+		</contacts>
+
+
+		<!-- ======================== -->
+		<!--  Call logs (incoming)    -->
+		<!-- ======================== -->
+		<incoming_calls>
+			<md5>AC1810BBD815E00FB2D9502006922BB8</md5>
+			<sha256>AF4474AF4DABF0E87425F92F90647F5574E9D4DC50B4302424ED62A7455832B5</sha256>
+			<incoming_call>
+				<id>1</id>
+				<type>Incoming</type>
+				<number>0275176265</number>
+				<name>Lewis Walker</name>
+				<timestamp>2015-03-06T10:35:33+13:00</timestamp>
+				<duration>0:00:03</duration>
+			</incoming_call>
+			<incoming_call>
+				<id>2</id>
+				<type>Incoming</type>
+				<number>0212944678</number>
+				<name>DEI Test User2</name>
+				<timestamp>2015-03-05T13:29:15+13:00</timestamp>
+				<duration>0:00:07</duration>
+			</incoming_call>
+		</incoming_calls>
+
+
+
+		<!-- ======================== -->
+		<!--  Call logs (outgoing)    -->
+		<!-- ======================== -->
+		<outgoing_calls>
+			<md5>AC1810BBD815E00FB2D9502006922BB8</md5>
+			<sha256>AF4474AF4DABF0E87425F92F90647F5574E9D4DC50B4302424ED62A7455832B5</sha256>
+			<outgoing_call>
+				<id>1</id>
+				<type>Outgoing</type>
+				<number>71234567896</number>
+				<name>Lucy</name>
+				<timestamp>2015-03-06T14:11:43+13:00</timestamp>
+				<duration>N/A</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>2</id>
+				<type>Outgoing</type>
+				<number>71234567896</number>
+				<name>Lucy</name>
+				<timestamp>2015-03-06T14:07:04+13:00</timestamp>
+				<duration>N/A</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>3</id>
+				<type>Outgoing</type>
+				<number>703</number>
+				<name>Wicked Welcomes</name>
+				<timestamp>2015-03-06T14:06:42+13:00</timestamp>
+				<duration>N/A</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>4</id>
+				<type>Outgoing</type>
+				<number>+64275176265</number>
+				<name>Lewis Walker</name>
+				<timestamp>2015-03-06T13:14:52+13:00</timestamp>
+				<duration>N/A</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>5</id>
+				<type>Outgoing</type>
+				<number>0274500824</number>
+				<name>Leigh Dawson</name>
+				<timestamp>2015-03-06T12:19:56+13:00</timestamp>
+				<duration>0:00:07</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>6</id>
+				<type>Outgoing</type>
+				<number>0275176265</number>
+				<name>Lewis Walker</name>
+				<timestamp>2015-03-06T10:34:05+13:00</timestamp>
+				<duration>N/A</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>7</id>
+				<type>Outgoing</type>
+				<number>0221957902</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T10:28:17+13:00</timestamp>
+				<duration>0:00:10</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>8</id>
+				<type>Outgoing</type>
+				<number>0212944678</number>
+				<name>DEI Test User2</name>
+				<timestamp>2015-03-05T13:24:19+13:00</timestamp>
+				<duration>0:00:05</duration>
+			</outgoing_call>
+			<outgoing_call>
+				<id>9</id>
+				<type>Outgoing</type>
+				<number>777</number>
+				<name>Customer Service</name>
+				<timestamp>2015-03-04T16:23:02+13:00</timestamp>
+				<duration>0:00:51</duration>
+			</outgoing_call>
+		</outgoing_calls>
+
+
+
+		<!-- ======================== -->
+		<!--  Call logs (missed)      -->
+		<!-- ======================== -->
+		<missed_calls>
+			<md5>AC1810BBD815E00FB2D9502006922BB8</md5>
+			<sha256>AF4474AF4DABF0E87425F92F90647F5574E9D4DC50B4302424ED62A7455832B5</sha256>
+			<missed_call>
+				<id>1</id>
+				<type>Missed</type>
+				<number>0221957902</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T10:42:07+13:00</timestamp>
+			</missed_call>
+			<missed_call>
+				<id>2</id>
+				<type>Missed</type>
+				<number>0212944678</number>
+				<name>DEI Test User2</name>
+				<timestamp>2015-03-05T14:26:01+13:00</timestamp>
+			</missed_call>
+		</missed_calls>
+
+
+		<!-- ======================== -->
+		<!--  Call logs (unknown)     -->
+		<!-- ======================== -->
+		<unknown_calls>
+			<md5>AC1810BBD815E00FB2D9502006922BB8</md5>
+			<sha256>AF4474AF4DABF0E87425F92F90647F5574E9D4DC50B4302424ED62A7455832B5</sha256>
+		</unknown_calls>
+
+
+
+		<!-- ======================== -->
+		<!--         Calendar         -->
+		<!-- ======================== -->
+		<calendar>
+			<md5>43E46017894896568024CA74ACB10AA5</md5>
+			<sha256>578E46E8F2FE5F899B6A8ECB1CA45BBEA3FD5FE3C46411F4513207702F2C4E94</sha256>
+			<entry>
+				<id>1</id>
+				<subject>Meet Dave</subject>
+				<location>
+				</location>
+				<description>Catch up</description>
+				<start>2015-03-18T00:00:00Z</start>
+				<end>2015-03-18T00:00:01Z</end>
+				<alarm_time>2015-03-17T23:58:00Z</alarm_time>
+				<repeat_until>3915-03-20T12:00:00Z</repeat_until>
+				<repeat_type>4</repeat_type>
+				<repeat_position>0</repeat_position>
+				<repeat_every>1</repeat_every>
+			</entry>
+			<entry>
+				<id>2</id>
+				<subject>Mums birthday</subject>
+				<location>Wellington</location>
+				<description>Buy a present</description>
+				<start>2015-11-05T00:00:00Z</start>
+				<end>2015-11-06T00:00:00Z</end>
+				<alarm_time>2015-11-04T23:59:00Z</alarm_time>
+				<repeat_until>
+				</repeat_until>
+				<repeat_type>
+				</repeat_type>
+				<repeat_position>
+				</repeat_position>
+				<repeat_every>
+				</repeat_every>
+			</entry>
+			<entry>
+				<id>3</id>
+				<subject>Private meeting</subject>
+				<location>Private location</location>
+				<description>
+				</description>
+				<start>2016-01-08T06:00:00+13:00</start>
+				<end>2016-01-08T07:00:00+13:00</end>
+				<alarm_time>2016-01-08T05:59:00+13:00</alarm_time>
+				<repeat_until>
+				</repeat_until>
+				<repeat_type>
+				</repeat_type>
+				<repeat_position>
+				</repeat_position>
+				<repeat_every>
+				</repeat_every>
+			</entry>
+		</calendar>
+
+
+		<!-- ======================== -->
+		<!--           Tasks          -->
+		<!-- ======================== -->
+		<tasks>
+			<md5>43E46017894896568024CA74ACB10AA5</md5>
+			<sha256>578E46E8F2FE5F899B6A8ECB1CA45BBEA3FD5FE3C46411F4513207702F2C4E94</sha256>
+		</tasks>
+
+
+		<!-- ======================== -->
+		<!--          Notes           -->
+		<!-- ======================== -->
+		<notes>
+		</notes>
+
+
+		<!-- ======================== -->
+		<!--      SMS Messages        -->
+		<!-- ======================== -->
+		<sms_messages>
+			<md5>45C9D282F37B6E0BEEDEA85FA926C2AE</md5>
+			<sha256>540E532D0A6E0868379D3C10E57B670E91D661FA93ED7533FCBCC85D7897F00F</sha256>
+			<sms_message>
+				<id>1</id>
+				<number>+64212944678</number>
+				<name>N/A</name>
+				<timestamp>2015-03-05T14:29:50+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Hi, how is it going?:)</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>2</id>
+				<number>+64212944678</number>
+				<name>N/A</name>
+				<timestamp>2015-03-05T14:30:35+13:00</timestamp>
+				<status>Sent</status>
+				<folder>Sent</folder>
+				<storage>Phone</storage>
+				<type>Outgoing</type>
+				<text>Not bad, thnx. How r u?</text>
+			</sms_message>
+			<sms_message>
+				<id>3</id>
+				<number>+64212944678</number>
+				<name>N/A</name>
+				<timestamp>2015-03-05T14:39:03+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Not too bad. Do u want to catch up for coffee sometime the next week?</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>4</id>
+				<number>+64212944678</number>
+				<name>N/A</name>
+				<timestamp>2015-03-05T14:51:52+13:00</timestamp>
+				<status>Sent</status>
+				<folder>Sent</folder>
+				<storage>Phone</storage>
+				<type>Outgoing</type>
+				<text>Yea,sure.what day/time suit u?</text>
+			</sms_message>
+			<sms_message>
+				<id>5</id>
+				<number>+64221957902</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T10:25:31+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>
+					This FREE whoCalled TXT was sent to u by Vodafone. U missed a call frm +64221957902, at 09:50 on Friday.
+					Call 706 FREE for info on this service
+				</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>6</id>
+				<number>+64275176265</number>
+				<name>Walker Lewis </name>
+				<internal_name>1</internal_name>
+				<timestamp>2015-03-06T12:51:57+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Hey Olga</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>7</id>
+				<number>+64275176265</number>
+				<name>Walker Lewis </name>
+				<internal_name>1</internal_name>
+				<timestamp>2015-03-06T12:52:12+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Hey olga...</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>8</id>
+				<number>+64275176265</number>
+				<name>Walker Lewis </name>
+				<internal_name>1</internal_name>
+				<timestamp>2015-03-06T13:11:09+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Hello DEI</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>9</id>
+				<number>+64275176265</number>
+				<name>Walker Lewis </name>
+				<internal_name>1</internal_name>
+				<timestamp>2015-03-06T13:15:04+13:00</timestamp>
+				<status>Unread</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Unread</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>10</id>
+				<number>0221957902</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T13:18:40+13:00</timestamp>
+				<status>Sent</status>
+				<folder>Sent</folder>
+				<storage>Phone</storage>
+				<type>Outgoing</type>
+				<text>Lovely:)</text>
+			</sms_message>
+			<sms_message>
+				<id>11</id>
+				<number>+64212944678</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T13:21:45+13:00</timestamp>
+				<status>Read</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Thats cool</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>12</id>
+				<number>+64212944678</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T13:27:17+13:00</timestamp>
+				<status>Unread</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Save those just in case</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>13</id>
+				<number>
+				</number>
+				<name>Vodafone</name>
+				<timestamp>2015-03-06T14:11:17+13:00</timestamp>
+				<status>Unread</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Sorry - This service on 71234567896 is not available at the moment. Please try again later</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+			<sms_message>
+				<id>14</id>
+				<number>71234567896</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T14:11:17+13:00</timestamp>
+				<status>Sent</status>
+				<folder>Sent</folder>
+				<storage>Phone</storage>
+				<type>Outgoing</type>
+				<text>Hello</text>
+			</sms_message>
+			<sms_message>
+				<id>15</id>
+				<number>71234567896</number>
+				<name>N/A</name>
+				<timestamp>2015-03-06T14:14:35+13:00</timestamp>
+				<status>Unsent</status>
+				<folder>Drafts</folder>
+				<storage>Phone</storage>
+				<type>Outgoing</type>
+				<text>Unsent message</text>
+			</sms_message>
+			<sms_message>
+				<id>16</id>
+				<number>+64274500824</number>
+				<name>Dawson Leigh </name>
+				<internal_name>1</internal_name>
+				<timestamp>2015-03-09T09:36:53+13:00</timestamp>
+				<status>Unread</status>
+				<folder>Inbox</folder>
+				<storage>Phone</storage>
+				<type>Incoming</type>
+				<text>Morning. Just down the lab getting ufed extract from olga phone. Leigh</text>
+				<smsc>+6421600600</smsc>
+			</sms_message>
+		</sms_messages>
+
+
+
+		<!-- ======================== -->
+		<!--      MMS Messages        -->
+		<!-- ======================== -->
+		<mms_messages>
+			<md5>1D245481DC1C44CCAAC58B0EAB4546F5</md5>
+			<sha256>B1C7CC07825A5BBBA5FAE3F92CEB205E30C7E7FC60FCCB43664B0602F25E1897</sha256>
+			<mms_message>
+				<id>1</id>
+				<timestamp>2015-03-06T13:25:59+13:00</timestamp>
+				<folder>Inbox</folder>
+				<status>Unread</status>
+				<priority>Normal</priority>
+				<from>
+					<number>+64212944678</number>
+				</from>
+				<attachments>
+					<attachment>
+						<file>Attachments/Wicked_Welcomes.vcf</file>
+						<name>Wicked_Welcomes.vcf</name>
+						<md5>07B5FF6CF86B19BBA5D1F4B21C09EA42</md5>
+						<sha256>D6962ADCCC9AF73FB837B2744ED3789FD9113CCDAB4F844BE2669EAADA16F311</sha256>
+					</attachment>
+				</attachments>
+			</mms_message>
+			<mms_message>
+				<id>2</id>
+				<timestamp>2015-03-06T13:24:05+13:00</timestamp>
+				<folder>Inbox</folder>
+				<status>Read</status>
+				<priority>Normal</priority>
+				<from>
+					<number>+64212944678</number>
+				</from>
+				<attachments>
+					<attachment>
+						<file>Attachments/Customer_Service.vcf</file>
+						<name>Customer_Service.vcf</name>
+						<md5>DE34B22C6FC343169A34A1D1FB2F07EB</md5>
+						<sha256>036B86925943587A58D6D2A8E9144BBF646DB7946EAC6CAA3C70E8D39863AC69</sha256>
+					</attachment>
+				</attachments>
+			</mms_message>
+			<mms_message>
+				<id>3</id>
+				<timestamp>2015-03-06T13:15:29+13:00</timestamp>
+				<folder>Inbox</folder>
+				<status>Unread</status>
+				<priority>Normal</priority>
+				<from>
+					<name>Walker Lewis </name>
+					<internal_name>1</internal_name>
+					<number>+64275176265</number>
+				</from>
+				<attachments>
+					<attachment>
+						<file>Attachments/imagejpeg_0.jpg</file>
+						<name>imagejpeg_0.jpg</name>
+						<md5>C7AC2CF9943E5F6CB8AF2C0C6A8EBB44</md5>
+						<sha256>ADBA901A8C9E81DCBD9021F4DA5AFED3D6457F378A834CDDB8D7EE2C3953D183</sha256>
+					</attachment>
+				</attachments>
+			</mms_message>
+			<mms_message>
+				<id>4</id>
+				<timestamp>2015-03-06T12:52:16+13:00</timestamp>
+				<folder>Inbox</folder>
+				<status>Read</status>
+				<priority>Normal</priority>
+				<from>
+					<name>Walker Lewis </name>
+					<internal_name>1</internal_name>
+					<number>+64275176265</number>
+				</from>
+				<attachments>
+					<attachment>
+						<file>Attachments/imagejpeg_0(duplicate_filename_1).jpg</file>
+						<name>imagejpeg_0.jpg</name>
+						<md5>AA270395AAF7D8ECC5015A0733AA74F0</md5>
+						<sha256>42EEEB23807015C31A6053FD7A05F8B8F98A8896C782C7617E1058A88646D99B</sha256>
+					</attachment>
+				</attachments>
+			</mms_message>
+			<mms_message>
+				<id>5</id>
+				<timestamp>2015-03-06T12:40:31+13:00</timestamp>
+				<folder>Sent</folder>
+				<status>Sent</status>
+				<priority>Normal</priority>
+				<to>
+					<number>0221957902</number>
+				</to>
+				<attachments>
+					<attachment>
+						<file>Attachments/Raw.png</file>
+						<name>Raw.png</name>
+						<md5>39C008E7BC3A13F378997A20A90B2BF1</md5>
+						<sha256>1C2468A01C8B605DB6456409B2C228A378761834C49684B83412A083F7667ACE</sha256>
+					</attachment>
+				</attachments>
+			</mms_message>
+			<mms_message>
+				<id>6</id>
+				<timestamp>2015-03-05T14:56:16+13:00</timestamp>
+				<folder>Sent</folder>
+				<status>Sent</status>
+				<priority>Normal</priority>
+				<to>
+					<number>0212944678</number>
+				</to>
+				<attachments>
+					<attachment>
+						<file>Attachments/20150305_145409.jpeg</file>
+						<name>20150305_145409.jpeg</name>
+						<md5>92340D271BE5B7CDB587D8E79DF230E5</md5>
+						<sha256>F14B6A9375264C4D8EFE23506C39D20D5DA1ABFAB3691756FEE101864C30D606</sha256>
+					</attachment>
+				</attachments>
+				<body>
+					<preview>Check out this!</preview>
+				</body>
+			</mms_message>
+		</mms_messages>
+
+
+		<!-- ======================== -->
+		<!--          Images          -->
+		<!-- ======================== -->
+		<image_files>
+			<image>
+				<id>1</id>
+				<name>edwardcullen_piano.jpg</name>
+				<stored_name>edwardcullen_piano.jpg</stored_name>
+				<thumb_location>Images/edwardcullen_piano.jpg</thumb_location>
+				<path>Device storage/Pictures/</path>
+				<memory>Phone</memory>
+				<size>19234</size>
+				<date_time>2015-03-06T12:23:50</date_time>
+				<md5>081D07C1F29A180C8E4D80270475F59D</md5>
+				<sha256>AB1F07E3A595D10F762D840E20830FAFA1758C27C4591AF4919190E1B565ECAC</sha256>
+				<meta>
+					<pixel_resolution>240x400</pixel_resolution>
+				</meta>
+			</image>
+			<image>
+				<id>2</id>
+				<name>Find.png</name>
+				<stored_name>Find.png</stored_name>
+				<thumb_location>Images/Find.png</thumb_location>
+				<path>Device storage/Pictures/</path>
+				<memory>Phone</memory>
+				<size>85907</size>
+				<date_time>2015-03-06T12:23:50</date_time>
+				<md5>ECABFF48F1FADB553C251BBCF92623EE</md5>
+				<sha256>E65F1DF49AE98643E77A6D1CC466AE3F0FA1FB29966D104AEC1F2A7AE19E3FC6</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>3</id>
+				<name>fish.gif</name>
+				<stored_name>fish.gif</stored_name>
+				<thumb_location>Images/fish.gif</thumb_location>
+				<path>Device storage/Pictures/</path>
+				<memory>Phone</memory>
+				<size>30138</size>
+				<date_time>2015-03-06T12:23:50</date_time>
+				<md5>842C002CADD48E5250CF4654C565D7BD</md5>
+				<sha256>F7CB4DE8579BD4C699ED61D38049ADD4A614F6E708E7E8F6223E3F91394D8342</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>4</id>
+				<name>Teddy.gif</name>
+				<stored_name>Teddy.gif</stored_name>
+				<thumb_location>Images/Teddy.gif</thumb_location>
+				<path>Device storage/Pictures/</path>
+				<memory>Phone</memory>
+				<size>444192</size>
+				<date_time>2015-03-06T12:24:04</date_time>
+				<md5>33B4F923223AC8A6D822DF5410B9A328</md5>
+				<sha256>9D8CC4B0B9AC7C8A6FF8D1EACD745813E7FFB2A57D998BB94E0EB42A84B2A075</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>5</id>
+				<name>Wink .jpg</name>
+				<stored_name>Wink .jpg</stored_name>
+				<thumb_location>Images/Wink .jpg</thumb_location>
+				<path>Device storage/Pictures/</path>
+				<memory>Phone</memory>
+				<size>4395</size>
+				<date_time>2015-03-06T12:24:04</date_time>
+				<md5>F5516314EC61A9DE5E9BAC6D3540D386</md5>
+				<sha256>219162EDBF8B15284475B6BACF0BE6CFC88931AC27ADAB8FDB6C34DE650C9373</sha256>
+				<meta>
+					<pixel_resolution>80x80</pixel_resolution>
+				</meta>
+			</image>
+			<image>
+				<id>6</id>
+				<name>Raw.png</name>
+				<stored_name>Raw.png</stored_name>
+				<thumb_location>Images/Raw.png</thumb_location>
+				<path>Device storage/Pictures/</path>
+				<memory>Phone</memory>
+				<size>53003</size>
+				<date_time>2015-03-06T12:24:04</date_time>
+				<md5>39C008E7BC3A13F378997A20A90B2BF1</md5>
+				<sha256>1C2468A01C8B605DB6456409B2C228A378761834C49684B83412A083F7667ACE</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>7</id>
+				<name>NewMemo_05032015_151050_1.jpg</name>
+				<stored_name>NewMemo_05032015_151050_1.jpg</stored_name>
+				<thumb_location>Images/Thumbs/NewMemo_05032015_151050_1.jpg</thumb_location>
+				<path>Device storage/SMemoExports/</path>
+				<memory>Phone</memory>
+				<size>476822</size>
+				<date_time>2015-03-05T15:10:54</date_time>
+				<md5>88CFF140C4F106DBFA2692152C332D36</md5>
+				<sha256>79830B437E11C4E65CB3B94B2F8ED7788D3E9260160553F9A42EF778F7FD8AD2</sha256>
+				<meta>
+					<pixel_resolution>1050x1602</pixel_resolution>
+				</meta>
+			</image>
+			<image>
+				<id>8</id>
+				<name>20150305_145409.jpg</name>
+				<stored_name>20150305_145409.jpg</stored_name>
+				<thumb_location>Images/Thumbs/20150305_145409.jpg</thumb_location>
+				<path>Device storage/DCIM/Camera/</path>
+				<memory>Phone</memory>
+				<size>3004626</size>
+				<date_time>2015-03-05T14:54:09</date_time>
+				<md5>D78E77608098EADA954D2AA0073EF076</md5>
+				<sha256>EB9D3A2BF3B2156F0F373EE4B29D49AE0A4AC9C3F2BF021C33D83175724DE1BB</sha256>
+				<meta>
+					<resolution>72x72 (unit: inch)</resolution>
+					<pixel_resolution>4128x2322</pixel_resolution>
+					<camera_make>SAMSUNG</camera_make>
+					<camera_model>GT-I9506</camera_model>
+					<exif_date_time>2015:03:05 14:54:08</exif_date_time>
+				</meta>
+			</image>
+			<image>
+				<id>9</id>
+				<name>20150306_115144.jpg</name>
+				<stored_name>20150306_115144.jpg</stored_name>
+				<thumb_location>Images/Thumbs/20150306_115144.jpg</thumb_location>
+				<path>Device storage/DCIM/Camera/</path>
+				<memory>Phone</memory>
+				<size>1865412</size>
+				<date_time>2015-03-06T11:51:44</date_time>
+				<md5>70BBA7DB85DC568D949892E25C921A3B</md5>
+				<sha256>E5834FDED8470545001E26D96E4A355AC27169731063CB63D58E8997D137760B</sha256>
+				<meta>
+					<resolution>72x72 (unit: inch)</resolution>
+					<pixel_resolution>4128x2322</pixel_resolution>
+					<camera_make>SAMSUNG</camera_make>
+					<camera_model>GT-I9506</camera_model>
+					<exif_date_time>2015:03:06 11:51:44</exif_date_time>
+				</meta>
+			</image>
+			<image>
+				<id>10</id>
+				<name>20150306_115201.jpg</name>
+				<stored_name>20150306_115201.jpg</stored_name>
+				<thumb_location>Images/Thumbs/20150306_115201.jpg</thumb_location>
+				<path>Device storage/DCIM/Camera/</path>
+				<memory>Phone</memory>
+				<size>3457303</size>
+				<date_time>2015-03-06T11:52:01</date_time>
+				<md5>496A8D43A44AE6F344228DDF323512E0</md5>
+				<sha256>E9DCAFF8E238CA3400FC24975AB18EE32694335D466D53E9A3A3480B763E9B7F</sha256>
+				<meta>
+					<resolution>72x72 (unit: inch)</resolution>
+					<pixel_resolution>4128x2322</pixel_resolution>
+					<camera_make>SAMSUNG</camera_make>
+					<camera_model>GT-I9506</camera_model>
+					<exif_date_time>2015:03:06 11:52:00</exif_date_time>
+				</meta>
+			</image>
+			<image>
+				<id>11</id>
+				<name>1.png</name>
+				<stored_name>1.png</stored_name>
+				<thumb_location>Images/1.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/FullScreenBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>3836295</size>
+				<date_time>2015-03-05T13:27:59</date_time>
+				<md5>E5794C4723DB7261245A4E087B05B594</md5>
+				<sha256>4D74FB80FE100CB78EF1A982CEBB21EDE46D6455D1F83A07E93D15B2E7EE39FE</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>12</id>
+				<name>2.png</name>
+				<stored_name>2.png</stored_name>
+				<thumb_location>Images/2.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/FullScreenBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>3836295</size>
+				<date_time>2015-03-05T15:04:04</date_time>
+				<md5>FFC061B4040DCAC3A9D5A3A1AA94B0A0</md5>
+				<sha256>B5AA5EDA836D94BBD833F339363A43653BFABD8BCB3216D5DEDC1E2566700C36</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>13</id>
+				<name>4.png</name>
+				<stored_name>4.png</stored_name>
+				<thumb_location>Images/4.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/FullScreenBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>3836295</size>
+				<date_time>2015-03-05T15:09:16</date_time>
+				<md5>79AB8B2F83215125B0952DC94403AFCE</md5>
+				<sha256>3A268CBFF031062C50C3A4DB96884601628575B773BA7702F8BF9463454E98E2</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>14</id>
+				<name>5.png</name>
+				<stored_name>5.png</stored_name>
+				<thumb_location>Images/5.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/FullScreenBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>3836295</size>
+				<date_time>2015-03-06T10:53:49</date_time>
+				<md5>D41A30054D619449ED5A5A627983AA51</md5>
+				<sha256>25E93034A6D4E323581C779540B1E557C287CF49A5D531B7A98F8666C4592720</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>15</id>
+				<name>6.png</name>
+				<stored_name>6.png</stored_name>
+				<thumb_location>Images/6.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/FullScreenBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>3836295</size>
+				<date_time>2015-03-06T10:56:09</date_time>
+				<md5>6490D2A2D6B8CFC4F191BDFEF9F40B9B</md5>
+				<sha256>A515F2DDEDAF29E4A9D70DFF440B3D9A7AC6E954725BC70D715BBF9972FD2EC3</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>16</id>
+				<name>1.png</name>
+				<stored_name>0000~1.png</stored_name>
+				<thumb_location>Images/0000~1.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/TabBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>492135</size>
+				<date_time>2015-03-05T13:27:59</date_time>
+				<md5>4DDF24631DE3C6C6F87650E3D32D8860</md5>
+				<sha256>13A9CE01C9D3A6C3C48CAB60FA8AED4E65D8704E7B6B48A34A7E5C42D39F1626</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>17</id>
+				<name>2.png</name>
+				<stored_name>0001~2.png</stored_name>
+				<thumb_location>Images/0001~2.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/TabBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>492135</size>
+				<date_time>2015-03-05T15:04:04</date_time>
+				<md5>C944855C2E6164A681DC7DF249CEA43F</md5>
+				<sha256>484F6B244528808D8A31C04E2ED90809F5F09D47EEECD7EDECAE93D5D372B97D</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>18</id>
+				<name>4.png</name>
+				<stored_name>0002~4.png</stored_name>
+				<thumb_location>Images/0002~4.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/TabBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>492135</size>
+				<date_time>2015-03-05T15:09:16</date_time>
+				<md5>7E3A6E43C3F6E80EF528C1C01FFE414C</md5>
+				<sha256>E91ED5F70CECD371548623227628067AAC088144D8B81ACD32A799DF559147CB</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>19</id>
+				<name>5.png</name>
+				<stored_name>0003~5.png</stored_name>
+				<thumb_location>Images/0003~5.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/TabBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>492135</size>
+				<date_time>2015-03-06T10:53:49</date_time>
+				<md5>CED2CC8BEF8964FC18C033AEDA6CC364</md5>
+				<sha256>EBE7359A3FC0DA4A8D31CA8864D97B62657645A1005825DE3DB7E501EAE20313</sha256>
+				<meta>
+				</meta>
+			</image>
+			<image>
+				<id>20</id>
+				<name>6.png</name>
+				<stored_name>0004~6.png</stored_name>
+				<thumb_location>Images/0004~6.png</thumb_location>
+				<path>Device storage/Android/data/com.sec.android.app.sbrowser/files/Pictures/com.sec.android.app.sbrowser/TabManager/TabBitmap/Instance1/</path>
+				<memory>Phone</memory>
+				<size>492135</size>
+				<date_time>2015-03-06T10:56:09</date_time>
+				<md5>C11B99607174079CAAB83018EBCC3432</md5>
+				<sha256>00A7EE6013A4FBE1EF79EBEFC4DAFC8A911727B7F38B7F705B2B7923AE6BE848</sha256>
+				<meta>
+				</meta>
+			</image>
+		</image_files>
+
+
+		<!-- ======================== -->
+		<!--        Ringtones         -->
+		<!-- ======================== -->
+		<ringtone_files>
+			<ringtone>
+				<id>1</id>
+				<name>Voice 001.m4a</name>
+				<stored_name>Voice 001.m4a</stored_name>
+				<path>Device storage/Sounds/</path>
+				<memory>Phone</memory>
+				<md5>D5B5CB9DA98C86997CEF52EBB25F4D77</md5>
+				<sha256>43B4E5D46FA3FBAE384AE7AE93E4F1BCDEA816DDE077F6CB8503AEB5861AA0FE</sha256>
+				<size>245488</size>
+				<date_time>2015-03-05T15:33:27</date_time>
+			</ringtone>
+		</ringtone_files>
+
+
+		<!-- ======================== -->
+		<!--          Audio           -->
+		<!-- ======================== -->
+		<audio_files>
+			<audio>
+				<id>1</id>
+				<name>Adele - Someone Like You.mp3</name>
+				<stored_name>Adele - Someone Like You.mp3</stored_name>
+				<path>Device storage/Music/</path>
+				<memory>Phone</memory>
+				<md5>AF16F84D27D42758D8F8BD2A1A55E5E5</md5>
+				<sha256>C747F4C17B8BD61AB9173CB59169CF9E4F8267AC79186511DF65AEAF206099C4</sha256>
+				<size>2273070</size>
+				<date_time>2015-03-06T12:22:55</date_time>
+			</audio>
+			<audio>
+				<id>2</id>
+				<name>black eyed peas- i got a feelin.mp3</name>
+				<stored_name>black eyed peas- i got a feelin.mp3</stored_name>
+				<path>Device storage/Music/</path>
+				<memory>Phone</memory>
+				<md5>246AF0C24527B60502F342A9FD439706</md5>
+				<sha256>96C0F78B1D4532B9F94148E113C05689B25190696EF1A61453E34B2DEBCBE6DD</sha256>
+				<size>1969136</size>
+				<date_time>2015-03-06T12:22:55</date_time>
+			</audio>
+			<audio>
+				<id>3</id>
+				<name>predator-growl.mp3</name>
+				<stored_name>predator-growl.mp3</stored_name>
+				<path>Device storage/Music/</path>
+				<memory>Phone</memory>
+				<md5>4F25E44731F43F71CC8712241DED01C6</md5>
+				<sha256>A5EBBB6B3A95CAAAE3A1CB6266943988D8CE43F8993BCB6171A9D797CBDD6B46</sha256>
+				<size>42112</size>
+				<date_time>2015-03-06T12:22:55</date_time>
+			</audio>
+			<audio>
+				<id>4</id>
+				<name>Rihanna Love The Way You Lie.mp3</name>
+				<stored_name>Rihanna Love The Way You Lie.mp3</stored_name>
+				<path>Device storage/Music/</path>
+				<memory>Phone</memory>
+				<md5>87187BC85A6FF16B70A9BDE291C1E65C</md5>
+				<sha256>62E3CB24BDAF554D52CE4D477828D7934E8E56723C5F92838454535F93495FE1</sha256>
+				<size>1317747</size>
+				<date_time>2015-03-06T12:22:56</date_time>
+			</audio>
+			<audio>
+				<id>5</id>
+				<name>Over_the_horizon.mp3</name>
+				<stored_name>Over_the_horizon.mp3</stored_name>
+				<path>Device storage/Samsung/Music/</path>
+				<memory>Phone</memory>
+				<md5>863ED2E929F24AD577905E92308A8800</md5>
+				<sha256>E6B9BB72B0771C9FE8DDE36AFFE5A012C0CCDA9C0DFE88BE3D396784B37B623D</sha256>
+				<size>3076096</size>
+				<date_time>2014-02-04T07:58:28</date_time>
+			</audio>
+		</audio_files>
+
+
+		<!-- ======================== -->
+		<!--          Video           -->
+		<!-- ======================== -->
+		<video_files>
+			<video>
+				<id>1</id>
+				<name>Mad Men Trailer.mp4</name>
+				<stored_name>Mad Men Trailer.mp4</stored_name>
+				<path>Device storage/Movies/</path>
+				<memory>Phone</memory>
+				<md5>21AF0430F531250446B31773EA17E1E7</md5>
+				<sha256>078DE74BAB053B2A98EA081DEBAB4E7A5DFA0D2FCFF3172210E3FE0E52673835</sha256>
+				<size>4242852</size>
+				<date_time>2015-03-06T12:30:27</date_time>
+			</video>
+			<video>
+				<id>2</id>
+				<name>Bilal Official Teaser Trailer #1 (2015) Animation Movie HD.mp4</name>
+				<stored_name>Bilal Official Teaser Trailer _1 (2015) Animation Movie HD.mp4</stored_name>
+				<path>Device storage/Movies/</path>
+				<memory>Phone</memory>
+				<md5>51E7EF837FF77F243176994FE8954FA6</md5>
+				<sha256>D5764E62132B3BE244CA7F6AFEE66012C203992A040CF8EACDC46130F81617AE</sha256>
+				<size>7378422</size>
+				<date_time>2015-03-06T12:30:40</date_time>
+			</video>
+			<video>
+				<id>3</id>
+				<name>20150306_122616.mp4</name>
+				<stored_name>20150306_122616.mp4</stored_name>
+				<path>Device storage/DCIM/Camera/</path>
+				<memory>Phone</memory>
+				<md5>1FF393909DC0EA0DA0BCAAD3034F10A6</md5>
+				<sha256>DDB65C651D59A4B6A2961BAD68DDB8A60B5B7CF41603FE4785EDFFDAEDAD7C75</sha256>
+				<size>17555752</size>
+				<date_time>2015-03-06T12:26:26</date_time>
+			</video>
+			<video>
+				<id>4</id>
+				<name>20150306_122708.mp4</name>
+				<stored_name>20150306_122708.mp4</stored_name>
+				<path>Device storage/DCIM/Camera/</path>
+				<memory>Phone</memory>
+				<md5>F45DBD2DAAEAECC4A40A585212749632</md5>
+				<sha256>5A14E5FCA78F319D402C62A69FD7FC64D77F33FB82A034CD78DD972D9908467D</sha256>
+				<size>10730110</size>
+				<date_time>2015-03-06T12:27:16</date_time>
+			</video>
+		</video_files>
+
+
+		<!-- ======================== -->
+		<!--    General information   -->
+		<!-- ======================== -->
+		<general_information>
+			<report_type>cell</report_type>
+			<selected_manufacture>Samsung GSM</selected_manufacture>
+			<selected_model>GT-i9506 Galaxy S4</selected_model>
+			<detected_manufacture>samsung</detected_manufacture>
+			<detected_model>GT-I9506</detected_model>
+			<revision>4.4.2 KOT49H I9506XXUCNJ2</revision>
+			<imei>359174050829076</imei>
+			<iccid>8964011310305086083</iccid>
+			<imsi>530011104508608</imsi>
+			<start_date_time>2015-03-09T09:36:30</start_date_time>
+			<end_date_time>2015-03-09T09:38:09</end_date_time>
+			<phone_date_time>2015-03-09T09:38:15+13:00</phone_date_time>
+			<connection_type>USB Cable</connection_type>
+			<ufed_version>
+				<xml_format>1.0.2.7</xml_format>
+				<software>4.1.0.367 UFED</software>
+				<full_image>2.13F05</full_image>
+				<tiny_image>N/A</tiny_image>
+				<serial>5911661</serial>
+			</ufed_version>
+			<usingclient>1</usingclient>
+		</general_information>
+
+
+		<!-- ======================== -->
+		<!--       Selection          -->
+		<!-- ======================== -->
+		<selection_information>
+			<contacts>Selected</contacts>
+			<sms>Selected</sms>
+			<call_logs>Selected</call_logs>
+			<mms>Selected</mms>
+			<email>Not Supported</email>
+			<im_messages>Not Supported</im_messages>
+			<images>Selected</images>
+			<ringtones>Selected</ringtones>
+			<audio>Selected</audio>
+			<video>Selected</video>
+			<calendar>Selected</calendar>
+			<tasks>Selected</tasks>
+			<notes>Selected</notes>
+			<databases>Not Supported</databases>
+			<user_dictionary>Not Supported</user_dictionary>
+		</selection_information>
+
+		<!-- ======================== -->
+		<!--     Extraction Notes     -->
+		<!-- ======================== -->
+		<extraction_notes>
+			<generic>
+				+ZZ – Extracted phone time stamp time zone is expressed in quarters of an hour
+				Last IMEI digit might be incorrect. Please check manually on the device.
+			</generic>
+		</extraction_notes>
+	</report>
+	<!-- - insert point - additional report - -->
+</reports>

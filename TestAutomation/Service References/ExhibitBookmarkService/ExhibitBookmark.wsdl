@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExhibitBookmark" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IExhibitBookmark_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EVE.Data" />
+      <xsd:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EVE.Serialization.Search" />
+      <xsd:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EVE.Common" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_Bookmarks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_Bookmarks" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_Bookmarks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_BookmarksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_File_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_File" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_File_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_FileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_Files_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_Files" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_Files_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_FilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_InsertExhibitBookmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExhibitBookmark" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_InsertExhibitBookmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExhibitBookmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_UserCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_UserCase" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_UserCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_UserCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_UserCaseCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_UserCaseCount" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_UserCaseCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_UserCaseCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_DeleteExhibitBookmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExhibitBookmark" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_DeleteExhibitBookmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExhibitBookmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_CaseTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_CaseTag" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_CaseTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_CaseTagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_CaseTagCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_CaseTagCount" />
+  </wsdl:message>
+  <wsdl:message name="IExhibitBookmark_GetExhibitBookmark_CaseTagCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExhibitBookmark_CaseTagCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IExhibitBookmark">
+    <wsdl:operation name="GetExhibitBookmark_Bookmarks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_Bookmarks" message="tns:IExhibitBookmark_GetExhibitBookmark_Bookmarks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_BookmarksResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_Bookmarks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark" message="tns:IExhibitBookmark_GetExhibitBookmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmarkResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_File">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_File" message="tns:IExhibitBookmark_GetExhibitBookmark_File_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_FileResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_File_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_Files">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_Files" message="tns:IExhibitBookmark_GetExhibitBookmark_Files_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_FilesResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_Files_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExhibitBookmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/InsertExhibitBookmark" message="tns:IExhibitBookmark_InsertExhibitBookmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/InsertExhibitBookmarkResponse" message="tns:IExhibitBookmark_InsertExhibitBookmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_UserCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_UserCase" message="tns:IExhibitBookmark_GetExhibitBookmark_UserCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_UserCaseResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_UserCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_UserCaseCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_UserCaseCount" message="tns:IExhibitBookmark_GetExhibitBookmark_UserCaseCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_UserCaseCountResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_UserCaseCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExhibitBookmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/DeleteExhibitBookmark" message="tns:IExhibitBookmark_DeleteExhibitBookmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/DeleteExhibitBookmarkResponse" message="tns:IExhibitBookmark_DeleteExhibitBookmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_CaseTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_CaseTag" message="tns:IExhibitBookmark_GetExhibitBookmark_CaseTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_CaseTagResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_CaseTag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_CaseTagCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_CaseTagCount" message="tns:IExhibitBookmark_GetExhibitBookmark_CaseTagCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_CaseTagCountResponse" message="tns:IExhibitBookmark_GetExhibitBookmark_CaseTagCount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IExhibitBookmark" type="tns:IExhibitBookmark">
+    <wsp:PolicyReference URI="#WSHttpBinding_IExhibitBookmark_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetExhibitBookmark_Bookmarks">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_Bookmarks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_File">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_File" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_Files">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_Files" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExhibitBookmark">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/InsertExhibitBookmark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_UserCase">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_UserCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_UserCaseCount">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_UserCaseCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExhibitBookmark">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/DeleteExhibitBookmark" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_CaseTag">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_CaseTag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExhibitBookmark_CaseTagCount">
+      <soap12:operation soapAction="http://tempuri.org/IExhibitBookmark/GetExhibitBookmark_CaseTagCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExhibitBookmark">
+    <wsdl:port name="WSHttpBinding_IExhibitBookmark" binding="tns:WSHttpBinding_IExhibitBookmark">
+      <soap12:address location="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

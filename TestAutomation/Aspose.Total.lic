@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Data>
+    <LicensedTo>Wynyard (NZ) Limited</LicensedTo>
+    <LicenseType>Developer OEM</LicenseType>
+    <LicenseNote>Limited to 1 developer.</LicenseNote>
+    <OrderID>131004073853</OrderID>
+    <OEM>This is a redistributable license</OEM>
+    <Products>
+      <Product>Aspose.Total</Product>
+    </Products>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>79decd21-ea38-4f3e-b1f3-31af1253ba19</SerialNumber>
+    <SubscriptionExpiry>20141007</SubscriptionExpiry>
+    <LicenseVersion>2.2</LicenseVersion>
+  </Data>
+  <Signature>hbXNAI7+D1UDvPyMkupvz1lq7Za4/PzNaouZEoq5yqGNPFyYNRVodr/l0luEdCJBIJVVTQlc6Zj7KVLzUWwoGEQ9+nT/9Vy5xFZHxbVcCIMKDtJvB3ryTUFh/wFAaJxwBgqRgbiKsmXj0T2W28mBpkAGxQZYdWv5ewWD4OkAd5Q=</Signature>
+</License>

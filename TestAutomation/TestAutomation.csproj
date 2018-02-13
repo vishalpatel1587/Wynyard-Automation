@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CA03FDA-34C2-4E7C-B173-D940282A49CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestAutomation</RootNamespace>
+    <AssemblyName>TestAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\EVE-3 All Projects\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Aspose\current\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\Logging\Current\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3">
+      <HintPath>..\..\_lib\NuGetPackages\Microsoft.Web.Services3.3.0.0.0\lib\net20\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\_lib\NUnit\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\_lib\NuGetPackages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\_lib\NuGetPackages\Selenium.WebDriver.2.44.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\_lib\NuGetPackages\Selenium.Support.2.44.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drivers\DBDriver\Infrastructure\QueryHelper.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\CaseTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\ConnectionMetadataTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\DistributedDatabase.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\EntityTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\ExhibitTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\ExhibitDatabase.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\FileCategoryTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\FileWarningTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\InternetMetadataTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\KnownFileCategoryTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\KnownFileTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\MediaTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\FileContentTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\PartitionMetadataTable.cs" />
+    <Compile Include="Drivers\DBDriver\Infrastructure\Table.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\SiteTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\UserWorkflowTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\FileHashTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\ImageMetadataTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\PdfMetadataTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\VideoMetadataTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\WorkTable.cs" />
+    <Compile Include="Drivers\DBDriver\Tables\FileMetadataTable.cs" />
+    <Compile Include="Drivers\PageDriver\Cases\AddCasePage.cs" />
+    <Compile Include="Drivers\PageDriver\Cases\CasesPage.cs" />
+    <Compile Include="Drivers\PageDriver\Exhibits\ExhibitsPage.cs" />
+    <Compile Include="Drivers\PageDriver\Exhibits\MediaPage.cs" />
+    <Compile Include="Drivers\PageDriver\Home\HomePage.cs" />
+    <Compile Include="Drivers\PageDriver\Login\LoginPage.cs" />
+    <Compile Include="Drivers\PageDriver\PageBase.cs" />
+    <Compile Include="Drivers\PageDriver\RecentActivity\RecentActivityPage.cs" />
+    <Compile Include="Drivers\PageDriver\Search\SearchPage.cs" />
+    <Compile Include="Drivers\PageDriver\System Messages\SystemMessagesPage.cs" />
+    <Compile Include="Drivers\PageDriver\Viewer\ViewerPage.cs" />
+    <Compile Include="Drivers\WebServiceDriver\MySoapClient.cs" />
+    <Compile Include="Drivers\WebServiceDriver\WSDriverUsingWebServices3Library.cs" />
+    <Compile Include="Drivers\WebServiceDriver\WSDriverUsingSystemNetLibrary.cs" />
+    <Compile Include="Exceptions\DeiDatabaseException.cs" />
+    <Compile Include="Exceptions\ElementNotDisplayedException.cs" />
+    <Compile Include="Features\DocumentationFormatExample\DocumentationFormattingExample.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentationFormattingExample.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\EndToEnd_Forensic\ForensicProcessingSmokeTest.feature.cs">
+      <DependentUpon>ForensicProcessingSmokeTest.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\EndToEnd_XRY\XRYLogicalProcessingAndSearch.feature.cs">
+      <DependentUpon>XRYLogicalProcessingAndSearch.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\GUI\Cases\AddCase.feature.cs">
+      <DependentUpon>AddCase.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\GUI\Exhibits\AddExhibit.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddExhibit.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\GUI\Home\CheckHomePageContent.feature.cs">
+      <DependentUpon>CheckHomePageContent.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\GUI\Login\Login.feature.cs">
+      <DependentUpon>Login.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\GUI\Search\Search.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Search.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\GUI\Media\CheckMedia.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CheckMedia.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Integration\Handlers\ImageRating\ImageRating.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageRating.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Integration\Handlers\ImageScaling\ImageScaling.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageScaling.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Integration\Handlers\Lib\ConnectionIngestion\ConnectionIngestion.feature.cs">
+      <DependentUpon>ConnectionIngestion.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\Integration\Handlers\Lib\XmlTransformation\XmlTransformation.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XmlTransformation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\EndToEnd_UFED\UfedLogicalProcessingExhibitDbTablesCheck.feature.cs">
+      <DependentUpon>UfedLogicalProcessingExhibitDbTablesCheck.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\EndToEnd_UFED\UfedProcessingStatisticsAndExhibitPropertiesCheck.feature.cs">
+      <DependentUpon>UfedProcessingStatisticsAndExhibitPropertiesCheck.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Helpers\TestConstants.cs" />
+    <Compile Include="Helpers\ExhibitHelper.cs" />
+    <Compile Include="Helpers\WorkflowHelper.cs" />
+    <Compile Include="Model\DataModel\FileMetadataModel.cs" />
+    <Compile Include="Model\DataModel\SearchDataModel.cs" />
+    <Compile Include="Model\ExhibitHelperModel.cs" />
+    <Compile Include="Steps\EndToEndTest\Forensic\ForensicProcessingSmokeTestSteps.cs" />
+    <Compile Include="Steps\EndToEndTest\EndtoEndBase.cs" />
+    <Compile Include="Steps\EndToEndTest\UFED\UfedLogicalProcessingExhibitDbTablesCheckSteps.cs" />
+    <Compile Include="Steps\EndToEndTest\UFED\UFEDProcessingStatisticsAndExhibitPropertiesCheckSteps.cs" />
+    <Compile Include="Steps\EndToEndTest\XRY\XRYLogicalProcessingAndSearchSteps.cs" />
+    <Compile Include="Steps\GUI\Media\CheckMediaSteps.cs" />
+    <Compile Include="Steps\GUI\Search\SearchSteps.cs" />
+    <Compile Include="Steps\Integration\Handlers\ConnectionIngestionProcessorSteps.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\ConnectionMetadataCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\EntityCheck.cs" />
+    <Compile Include="Steps\Integration\Handlers\Infrastructure\HandlersStepsBase.cs" />
+    <Compile Include="Steps\Integration\Handlers\Infrastructure\ImageHandlersBase.cs" />
+    <Compile Include="Features\GUI\Workflows\SaveCustomWorkflow.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaveCustomWorkflow.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Integration\Handlers\KnownFile\KnownFile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KnownFile.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CsvFileReader.cs" />
+    <Compile Include="Model\DataModel\KnownFileCategoryModel.cs" />
+    <Compile Include="Model\DataModel\MediaDataModel.cs" />
+    <Compile Include="Model\DataModel\ExhibitDataModel.cs" />
+    <Compile Include="Model\DataModel\CaseDataModel.cs" />
+    <Compile Include="Model\DataModel\LoginDataModel.cs" />
+    <Compile Include="Model\DataModel\WorkflowDataModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ExhibitBookmarkService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\EndToEndTest\ResultChecks\DataBaseCheckFactory.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\DataCheckBase.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\FileMetaDataCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\IDataBaseCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\ImageMetaDataCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\InternetMetaDataCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\PartitionMetaDataCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\PdfMetaDataCheck.cs" />
+    <Compile Include="Steps\EndToEndTest\ResultChecks\VideoMetaDataCheck.cs" />
+    <Compile Include="Steps\GUI\Cases\AddCaseSteps.cs" />
+    <Compile Include="Steps\DeiGuiTest.cs" />
+    <Compile Include="Steps\GUI\Exhibits\AddExhibitSteps.cs" />
+    <Compile Include="Steps\GUI\Home\CheckHomePageContentSteps.cs" />
+    <Compile Include="Steps\GUI\Login\LoginSteps.cs" />
+    <Compile Include="Steps\GUI\Workflows\SaveCustomWorkflowSteps.cs" />
+    <Compile Include="Steps\Integration\Handlers\ImageRatingHandlerSteps.cs" />
+    <Compile Include="Steps\Integration\Handlers\ImageScalingHandlerSteps.cs" />
+    <Compile Include="Steps\Integration\Handlers\KnownFileHandlerSteps.cs" />
+    <Compile Include="Steps\Integration\Handlers\Lib\XmlTransformation\XmlTransformationSteps.cs" />
+    <Compile Include="TestSteps.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Aspose.Total.lic" />
+    <None Include="Default.srprofile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\DocumentationFormatExample\DocumentationFormattingExample.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DocumentationFormattingExample.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EndToEnd_Forensic\ForensicProcessingSmokeTest.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ForensicProcessingSmokeTest.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EndToEnd_XRY\XRYLogicalProcessingAndSearch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>XRYLogicalProcessingAndSearch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Cases\AddCase.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddCase.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Exhibits\AddExhibit.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddExhibit.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Home\CheckHomePageContent.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CheckHomePageContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Login\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Search\Search.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Search.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Media\CheckMedia.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CheckMedia.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\GUI\Workflows\SaveCustomWorkflow.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SaveCustomWorkflow.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Integration\Handlers\ImageRating\ImageRating.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ImageRating.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Integration\Handlers\ImageScaling\ImageScaling.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ImageScaling.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Integration\Handlers\KnownFile\KnownFile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>KnownFile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Integration\Handlers\Lib\ConnectionIngestion\ConnectionIngestion.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ConnectionIngestion.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Integration\Handlers\Lib\XmlTransformation\XmlTransformation.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>XmlTransformation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EndToEnd_UFED\UfedLogicalProcessingExhibitDbTablesCheck.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UfedLogicalProcessingExhibitDbTablesCheck.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\EndToEnd_UFED\UfedProcessingStatisticsAndExhibitPropertiesCheck.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UfedProcessingStatisticsAndExhibitPropertiesCheck.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Resources\DEI_Automation.vhd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Resources\Communication\UfedLogical.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Communication\UfedPhysical.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\UFED_Logical_SmokeTest.vhd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Physical3.9_UFED_ZTE_GSM_R101.vhd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Physical4.1_UFED_ZTE_GSM_R101.vhd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\xry-Vodafone-8585smart-extended.vhd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="runtests.cmd" />
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmark.wsdl" />
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\TestAutomation.ExhibitBookmarkService.ExhibitBookmarkList1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ExhibitBookmarkService\TestAutomation.ExhibitBookmarkService.ExhibitBookmarkList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="SpecRunTestProfile.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Steps\EndToEndTest\TestData\ForensicSmokeTestExhibit\ExhibitDetails.csv" />
+    <None Include="Steps\EndToEndTest\TestData\ForensicSmokeTestExhibit\Test.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Steps\EndToEndTest\TestData\UfedLogicalProcessingExhibitDbTablesCheck\ExhibitDetails.csv" />
+    <None Include="Steps\EndToEndTest\TestData\UfedLogicalProcessingExhibitDbTablesCheck\Test.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Steps\EndToEndTest\TestData\XRYProcessingAndSearch\Test.config" />
+    <None Include="Steps\EndToEndTest\TestData\UFEDProcessingStatisticsAndExhibitPropertiesCheck\Test.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestRunner\runTests_Jenkins.bat" />
+    <None Include="TestRunner\runTests_Local.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ExhibitBookmarkService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ExhibitBookmarkService\ExhibitBookmarkService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ExhibitBookmarkService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ExhibitBookmarkService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ExhibitBookmarkService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EVE-3 All Projects\EVE.Framework.Tests\EVE.Framework.Tests.csproj">
+      <Project>{FE304FF0-280A-4841-902B-71C520D431CC}</Project>
+      <Name>EVE.Framework.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Common\EVE.Common\EVE.Common.csproj">
+      <Project>{499EAB6F-B938-42EC-BC5D-6E61B98EFE2B}</Project>
+      <Name>EVE.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Common\EVE.Data\EVE.Data.csproj">
+      <Project>{f121129d-3289-43ac-8083-aaf09cd5e4c4}</Project>
+      <Name>EVE.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Common\EVE.Functions\EVE.Functions.csproj">
+      <Project>{D2CD158D-76A8-43C1-BFA0-19C2FFC5CDC0}</Project>
+      <Name>EVE.Functions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Common\EVE.Serialization\EVE.Serialization.csproj">
+      <Project>{b79db4b3-ad30-491b-9331-5864cd460310}</Project>
+      <Name>EVE.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.GroupController\EVE.GroupController.Contract\EVE.GroupController.Contract.csproj">
+      <Project>{459c724b-f062-4686-92e5-c4cfc56ad118}</Project>
+      <Name>EVE.GroupController.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.ProcessingAgent\EVE.ProcessingAgent.Contract\EVE.ProcessingAgent.Contract.csproj">
+      <Project>{10d2c5a4-4dfe-4dcb-9b69-afd9f3156d00}</Project>
+      <Name>EVE.ProcessingAgent.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.ProcessingAgent\EVE.ProcessingAgent.Tests\EVE.ProcessingAgent.Tests.csproj">
+      <Project>{7BB202F7-3B7C-46B3-A07B-7657197D9E28}</Project>
+      <Name>EVE.ProcessingAgent.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.ProcessingAgent\EVE.ProcessingAgent\EVE.ProcessingAgent.csproj">
+      <Project>{43a8f928-2c9c-4762-a339-66798c598080}</Project>
+      <Name>EVE.ProcessingAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Services\EVE.BLL\EVE.BLL.csproj">
+      <Project>{432dc287-6c7d-4c39-8bfd-ee8d31ecd534}</Project>
+      <Name>EVE.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Site.Services\EVE.Site.BLL\EVE.Site.BLL.csproj">
+      <Project>{c44b4857-a884-46f7-b32f-5991a206253e}</Project>
+      <Name>EVE.Site.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Site.Services\EVE.Site.DAL\EVE.Site.DAL.csproj">
+      <Project>{99341EC6-32B7-43BE-8BA0-B3991BAA9C9D}</Project>
+      <Name>EVE.Site.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EVE.Workflow\EVE.Workflow\EVE.Workflow.csproj">
+      <Project>{0cb19d36-f54a-4c0f-9fe3-8be9cd3f8400}</Project>
+      <Name>EVE.Workflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="htmlReports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\svm_config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ImageRatingPositiveSample1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ImageRatingPositiveSample2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ImageScalingFailureTestData.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ImageScalingTestImage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

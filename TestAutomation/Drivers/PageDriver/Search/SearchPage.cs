@@ -1,0 +1,454 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Permissions;
+using Microsoft.Web.Services3.Referral;
+using NUnit.Framework;
+using NUnit.Mocks;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.PageObjects;
+using TestAutomation.Drivers.PageDriver.Viewer;
+using TestAutomation.Exceptions;
+using TestAutomation.Model.DataModel;
+
+#pragma warning disable 169
+#pragma warning disable 649
+
+namespace TestAutomation.Drivers.PageDriver.Search
+{
+    public class SearchPage : PageBase
+    {
+        private IWebDriver _driver;
+        private const string filemetadata = "FileMetadata";
+        private const string mobileContent = "Mobile Content";
+        private const string videos = "Videos";
+        private const string images = "Images";
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_divSearch")]
+        private IWebElement _searchPanelBar;
+
+
+        //To do: Add remainder of the input fields for other search types
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaMobile_txtKeywords")] 
+        private IWebElement _mobileContentKeywordsInputField;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaMetaData_txtKeywords")] 
+        private IWebElement _fileMetadataKeywordsInputField;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaImage_txtKeywords")] 
+        private IWebElement _ImageKeywordInputField;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaVideo_txtKeywords")]
+        private IWebElement _VideoKeywordInputField;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaContent_txtKeywords")]
+        private IWebElement _ContentKeywordInputField;
+        
+        //To do: Add remainder of the Checkbox elements for other search types
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaMobile_ctlExhibitPicker_chkSelectAll")]
+        private IWebElement _mobileContentSelectAllExhibitsCheckbox;
+
+        //To do: Add remainder of the search button elements for other search types
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaMobile_butSearch")]
+        private IWebElement _mobileContentSearchButton;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaMetaData_butSearch")]
+        private IWebElement _fileMetadataSearchButton;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaImage_butSearch")]
+        private IWebElement _imageSearchButton;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaVideo_butSearch")]
+        private IWebElement _videoSearchButton;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchCriteriaContent_butSearch")]
+        private IWebElement _contentSearchButton;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_ctlSearchResultImage_ResultsListView_ctrl0_FileNameSpan")]
+        private IWebElement _imageSearchResult;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_ctlSearchResultImage_ResultsListView_ctrl0_ThumbnailDiv")]
+        private IWebElement _imageThumbnail;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_ctlSearchResultVideo_ResultsListView_ctrl0_FileNameDiv")]
+        private IWebElement _videoSearchResult;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='MainContent_ctlSearchResult_SearchResultsGrid']/tbody/tr[2]/td[1]/input[2]")]
+        private IWebElement _fileMetadataContentCheckBox;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='MainContent_ctlSearchResultMobile_SearchResultsGrid']/tbody/tr[2]/td[1]/input[2]")]
+        private IWebElement _MobileContentContentCheckBox;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_ctlSearchResultVideo_ResultsListView_ctrl0_ItemSelectOption_ItemSelectCheckBox ")]
+        private IWebElement _VideoContentCheckBox;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_ctlSearchResultImage_ResultsListView_ctrl0_ItemSelectOption_ItemSelectCheckBox ")]
+        private IWebElement _ImageContentCheckBox;
+
+        [FindsBy(How = How.CssSelector, Using = "js_count.pluginCount")]
+        private IList<IWebElement> _pluginstats;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkImage]/span")]
+        private IWebElement _pluginstatsImage;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkVideo]/span/span")]
+        private IWebElement _pluginstatsVideo;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id=ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkMobile]/span/span")]
+        private IWebElement _pluginstatsMobile;
+
+        [FindsBy(How = How.CssSelector, Using = "#liSearch a")]
+        private IWebElement _searchLink;
+
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_MainContent_ctlSearchResultMobile_BookmarkTag_OptionsBookmarkMenu']/ul/li/a")]
+        private IWebElement _bookmarkLink;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_MainContent_ctlSearchResultMobile_LppTag_OptionsLppMenu']/ul/li/a")]
+        private IWebElement _lppLink;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_MainContent_ctlSearchResultMobile_SaveSearchControl_OptionsSaveSearchMenu']/ul/li/a")]
+        private IWebElement _saveSearchLink;
+
+        [FindsBy(How = How.ClassName, Using = "title-search")] 
+        private IWebElement _searchResultTitle;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkMobile")]
+        private IWebElement _searchMobileContentLink;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkMetadata")]
+        private IWebElement _searchFileMetadataLink;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkImage")]
+        private IWebElement _searchImagesLink;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkVideo")]
+        private IWebElement _searchVideoLink;
+
+        [FindsBy(How = How.Id, Using = "ctl00_MainContent_SearchPanelBar_i0_ctlSearchPicker_lnkContent")]
+        private IWebElement _searchContentLink;
+        
+        [FindsBy(How = How.Id, Using = "UpdatePanel1")]
+        private IWebElement _updatePanel;
+
+        [FindsBy(How = How.Id, Using = "MainContent_upResults")]
+        private IWebElement _searchResultsPanel;
+        
+        // Searched results table Mobile Content
+        [FindsBy(How = How.Id, Using = "MainContent_ctlSearchResultMobile_SearchResultsGrid")]
+        private IWebElement _mobileContentSearchResultsTable;
+
+        // Searched results table File Metadata
+        [FindsBy(How = How.Id, Using = "MainContent_ctlSearchResult_SearchResultsGrid")]
+        private IWebElement _fileMetadataSearchResultsTable;
+
+        public  string parentHandle;
+        public  string childHandle;
+
+        
+        public SearchPage(IWebDriver driver)
+        {
+            _driver = driver;
+            PageFactory.InitElements(_driver, this);
+
+            try
+            {
+                //System.Threading.Thread.Sleep(1000);
+                WaitForElementDisplayed(_driver, _updatePanel);
+            }
+            catch (Exception e)
+            {
+                throw new ElementNotDisplayedException("Search page is expected to be shown with the searchPanelBar Div (id='" + _searchPanelBar.GetAttribute("id") + "') displayed. Exception is:" + e.ToString());
+            }
+        }
+
+        public void CheckPluginStatsPresent()
+        {
+            Console.WriteLine(_pluginstats.Count);
+            Console.Write(_pluginstatsImage.Text);
+            //Assert.True(_pluginstatsImage.ToString());
+        }
+
+        // Navigates the user from the default search page to search mobile content      
+        public SearchPage GoToSearchMobileContentPage()
+        {
+            WaitForElementDisplayed(_driver,_searchMobileContentLink);
+            _searchMobileContentLink.Click();
+            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+            return new SearchPage(_driver);
+        }
+
+        // Navigates the user from the default search page to search file metadata    
+        public SearchPage GoToSearchFileMetadataPage()
+        {   
+            WaitForElementDisplayed(_driver,_searchFileMetadataLink);
+            _searchFileMetadataLink.Click();
+            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+            return new SearchPage(_driver);
+        }
+
+
+        //need to look into this method to make it more robust!!- Vishal 
+        //Can use IsSearchKeywordPresentInMobileContentSearchedResults method but it didn't work with Message'Bal'
+        //Future enhancemnent
+        public void OpenViewer()
+        {
+            try
+            {
+                //var action = new Actions(_driver);
+                //action.MoveToElement(_driver.FindElement(By.ClassName("row"))).DoubleClick().Build().Perform();
+                _driver.FindElement(By.ClassName("row")).Click();
+            }
+            catch (Exception exception)
+            {
+                
+                throw new Exception("Unable to open the viewer. "+exception);
+            }
+          
+
+        }
+        public ViewerPage GetParentAndChildHandlers()
+        {
+            //DoubleClickOnTableColumnWithExpectedIndexAndText(_driver, _mobileContentSearchResultsTable,8,expectedText);
+            parentHandle = _driver.CurrentWindowHandle;
+
+            do
+            {
+                
+            
+            foreach (string windowhandle in _driver.WindowHandles)
+            {
+                if(parentHandle!=windowhandle)
+                   childHandle = windowhandle; 
+                else
+                {
+                    continue;
+                }
+
+             }
+            } while (childHandle==null);
+           return new ViewerPage(_driver,childHandle,parentHandle);
+        }
+
+      
+        public void OpenImageVideoViewer()
+        {
+            try
+            {
+                //var action = new Actions(_driver);
+                //action.MoveToElement(_driver.FindElement(By.XPath("//img[contains(@src,'EVE.Site.Viewer')]"))).DoubleClick().Build().Perform();
+                //this is used action.MoveToElement(_driver.FindElement(By.XPath("//div[contains(@id,'ctl00_MainContent_ctlSearchResult') and contains(@id,'_ResultsListView_ctrl0_CategoryDiv')]"))).DoubleClick().Build().Perform();
+                _driver.FindElement(
+                    By.XPath(
+                        "//div[contains(@id,'ctl00_MainContent_ctlSearchResult') and contains(@id,'_ResultsListView_ctrl0_CategoryDiv')]"))
+                    .Click();
+            }
+            catch (Exception exception)
+            {
+                
+                throw new Exception("Unable to open the Image/Video in the viewer. "+ exception);
+            }
+         
+
+        }
+       
+        
+        // Navigates the user from the default search page to search file metadata    
+        public SearchPage GoToSearchImagesPlugin()
+        {
+            WaitForElementDisplayed(_driver,_searchImagesLink);
+            _searchImagesLink.Click();
+            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+            return new SearchPage(_driver);
+        }
+
+
+        public SearchPage GoToSearchVideoPlugin()
+        {
+            WaitForElementDisplayed(_driver,_searchVideoLink);
+            _searchVideoLink.Click();
+            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+            return new SearchPage(_driver);
+        }
+
+        public SearchPage GoToSearchContentPlugin()
+        {
+            _searchContentLink.Click();
+            _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(2));
+            return new SearchPage(_driver);
+        }
+
+        public SearchPage SearchMobileContent(string expectedText)
+        {
+            
+            TypeInto(_mobileContentKeywordsInputField, expectedText);
+            _mobileContentSearchButton.Click();
+
+                try
+                {
+                    WaitForElementDisplayed(_driver, _searchResultTitle);
+                }
+                catch (Exception)
+                {
+                    throw new ElementNotDisplayedException("Search results may not have been displayed");
+                }
+            return new SearchPage(_driver);
+        }
+
+        public SearchPage SearchFileMetadata(String expectedText)
+        {
+            
+            TypeInto(_fileMetadataKeywordsInputField, expectedText);
+            _fileMetadataSearchButton.Click();
+
+            try
+            {
+                WaitForElementDisplayed(_driver, _searchResultTitle);
+            }
+            catch (Exception)
+            {
+                throw new ElementNotDisplayedException("Search results may not have been displayed");
+            }
+            return new SearchPage(_driver);
+        }
+
+        public SearchPage SearchImages(string expectedText)
+        {
+            // Type into the search input keyword box
+            TypeInto(_ImageKeywordInputField, expectedText);
+            _imageSearchButton.Click();
+
+            try
+            {
+                WaitForElementDisplayed(_driver, _searchResultTitle);
+            }
+            catch (Exception)
+            {
+                throw new ElementNotDisplayedException("Search results may not have been displayed");
+            }
+            return new SearchPage(_driver);
+        }
+
+        public SearchPage SearchVideo(string expectedText)
+        {
+            // Type into the search input keyword box
+            TypeInto(_VideoKeywordInputField, expectedText);
+            _videoSearchButton.Click();
+
+            try
+            {
+                WaitForElementDisplayed(_driver, _searchResultTitle);
+            }
+            catch (Exception)
+            {
+                throw new ElementNotDisplayedException("Search results may not have been displayed");
+            }
+            return new SearchPage(_driver);
+        }
+
+        public void SelectContentForBookmark(string expectedPlugin)
+        {
+            switch (expectedPlugin)
+            {
+                case filemetadata:
+                    _fileMetadataContentCheckBox.Click();
+                    break;
+                case mobileContent:
+                    WaitForElementDisplayed(_driver,_mobileContentSearchResultsTable);
+                    CheckCheckboxIfUnchecked(_driver,_MobileContentContentCheckBox);
+                    VerifyLPPandBookmarkLinksAvailable();
+                    //_MobileContentContentCheckBox.Click();
+                    break;
+                case images:
+                    _ImageContentCheckBox.Click();
+                    break;
+                case videos:
+                    _VideoContentCheckBox.Click();
+                    break;
+    
+
+            }
+            
+        }
+
+        public void VerifyLPPandBookmarkLinksAvailable()
+        {
+            WaitForElementDisplayed(_driver,_bookmarkLink);
+            //WaitForElementDisplayed(_driver,);
+            _bookmarkLink.Click();
+
+        }
+        public SearchPage SearchContent(string expectedText)
+        {
+            // Type into the search input keyword box
+            WaitForElementDisplayed(_driver,_ContentKeywordInputField);
+            TypeInto(_ContentKeywordInputField, expectedText);
+            _contentSearchButton.Click();
+
+            try
+            {
+                WaitForElementDisplayed(_driver, _searchResultTitle);
+            }
+            catch (Exception)
+            {
+                throw new ElementNotDisplayedException("Search results may not have been displayed");
+            }
+            return new SearchPage(_driver);
+        }
+
+        public bool ValidateDates(string expectedTime, int searchResultContactsColumnIndex)
+        {
+            WaitForElementDisplayed(_driver, _mobileContentSearchResultsTable);
+            return DoesColumnWithExpectedIndexAndTextExistInTable(_mobileContentSearchResultsTable,
+                searchResultContactsColumnIndex, expectedTime);
+        }
+
+        public bool IsSearchKeywordPresentInMobileContentSearchedResults(string expectedSearchKeyword, int searchResultNameHtmlColumnIndex)
+        {
+            WaitForElementDisplayed(_driver,_mobileContentSearchResultsTable);
+            return DoesColumnWithExpectedIndexAndTextExistInTable(_mobileContentSearchResultsTable, searchResultNameHtmlColumnIndex, expectedSearchKeyword);
+        }
+
+        public bool IsSearchKeywordPresentInFileMetadataSearchedResults(string expectedSearchKeyword, int searchResultNameHtmlColumnIndex)
+        {
+            WaitForElementDisplayed(_driver, _fileMetadataSearchResultsTable);
+            return DoesColumnWithExpectedIndexAndTextExistInTable(_fileMetadataSearchResultsTable, searchResultNameHtmlColumnIndex, expectedSearchKeyword);
+        }
+
+
+        public bool IsSearchKeywordPresentInContentSearchedResults(string expectedSearchKeyword)
+        {
+            WaitForElementDisplayed(_driver, _fileMetadataSearchResultsTable);
+            return DoesColumnWithExpectedIndexAndTextExistInTable(_fileMetadataSearchResultsTable, expectedSearchKeyword);
+        }
+
+        public bool IsSearchKeywordPresentInImagesSearchedResults(string expectedSearchKeyword)
+        {
+            WaitForElementDisplayed(_driver,_imageThumbnail);
+            if (_imageThumbnail.Displayed)
+            {
+                return true;
+
+            }
+            return false;
+
+        }
+
+        
+        public bool IsSearchKeywordPresentInVideoSearchedResults(string expectedSearchKeyword)
+        {
+            
+
+            if (_videoSearchResult.Text == expectedSearchKeyword)
+                return true;
+            else
+            {
+                return false;
+            }
+
+
+        }
+
+    }
+}

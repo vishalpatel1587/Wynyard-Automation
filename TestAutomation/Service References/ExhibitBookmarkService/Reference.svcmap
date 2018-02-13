@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d1c4eb25-8056-4829-8aee-82ec801c487c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:300/EVE.Site.Services/ExhibitBookmarkService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ExhibitBookmarkService.xsd" MetadataType="Schema" ID="918b81cb-0daf-4889-b1a4-fcc44a543e8e" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ExhibitBookmarkService1.xsd" MetadataType="Schema" ID="eb0028f7-f835-4403-b2b5-b053f00eff44" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ExhibitBookmarkService2.xsd" MetadataType="Schema" ID="84bc0372-aa5b-441a-a6ba-c81a4f037a14" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ExhibitBookmarkService3.xsd" MetadataType="Schema" ID="676442bd-9848-4f81-b448-0494f47cdb99" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ExhibitBookmarkService4.xsd" MetadataType="Schema" ID="ec8bea0e-600f-4cf9-8167-519bc8e14aea" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ExhibitBookmark.wsdl" MetadataType="Wsdl" ID="b852d49f-0c95-45fb-afff-492562860cbe" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?wsdl" />
+    <MetadataFile FileName="ExhibitBookmarkService5.xsd" MetadataType="Schema" ID="bd97fde8-3077-4010-bf2c-b6a606b5cb31" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ExhibitBookmarkService.disco" MetadataType="Disco" ID="ab607257-a46d-4149-a0cd-97a4a119c925" SourceId="1" SourceUrl="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

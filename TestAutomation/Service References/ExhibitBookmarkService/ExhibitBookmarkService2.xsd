@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EVE.Serialization.Search" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EVE.Serialization.Search" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfExhibitBookmarkArgs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExhibitBookmarkArgs" nillable="true" type="tns:ExhibitBookmarkArgs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExhibitBookmarkArgs" nillable="true" type="tns:ArrayOfExhibitBookmarkArgs" />
+  <xs:complexType name="ExhibitBookmarkArgs">
+    <xs:sequence>
+      <xs:element name="_x003C_ExhibitId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_FileId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_FileName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_FilePath_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_IsUac_x003E_k__BackingField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExhibitBookmarkArgs" nillable="true" type="tns:ExhibitBookmarkArgs" />
+</xs:schema>

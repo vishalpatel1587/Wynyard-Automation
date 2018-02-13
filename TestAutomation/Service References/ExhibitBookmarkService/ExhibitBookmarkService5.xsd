@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EVE.Data" />
+  <xs:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EVE.Serialization.Search" />
+  <xs:import schemaLocation="http://wynns1a.cnw.co.nz:300/EVE.Site.Services/ExhibitBookmarkService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/EVE.Common" />
+  <xs:element name="GetExhibitBookmark_Bookmarks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="exhibitBookmarkId" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_BookmarksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EVE.Data" minOccurs="0" name="GetExhibitBookmark_BookmarksResult" nillable="true" type="q2:ExhibitBookmarkList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exhibitBookmarkId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmarkResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EVE.Data" minOccurs="0" name="GetExhibitBookmarkResult" nillable="true" type="q3:ExhibitBookmarkList.ExhibitBookmarkRow" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_File">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exhibitId" type="xs:int" />
+        <xs:element minOccurs="0" name="fileId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_FileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EVE.Data" minOccurs="0" name="GetExhibitBookmark_FileResult" nillable="true" type="q4:ExhibitBookmarkList.ExhibitBookmarkRow" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_Files">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exhibitId" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fileId" nillable="true" type="q5:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_FilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EVE.Data" minOccurs="0" name="GetExhibitBookmark_FilesResult" nillable="true" type="q6:ExhibitBookmarkList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertExhibitBookmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EVE.Serialization.Search" minOccurs="0" name="bookmarks" nillable="true" type="q7:ArrayOfExhibitBookmarkArgs" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="tags" nillable="true" type="q8:ArrayOfint" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EVE.Common" minOccurs="0" name="bookmarkStatus" type="q9:ExhibitBookmarkStatus" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertExhibitBookmarkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_UserCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userIds" nillable="true" type="q10:ArrayOfint" />
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="orderBy" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeUac" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_UserCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EVE.Data" minOccurs="0" name="GetExhibitBookmark_UserCaseResult" nillable="true" type="q11:ExhibitBookmarkList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_UserCaseCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="includeUac" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_UserCaseCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExhibitBookmark_UserCaseCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExhibitBookmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exhibitBookmarkId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExhibitBookmarkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_CaseTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" type="xs:int" />
+        <xs:element minOccurs="0" name="bookmarkTagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_CaseTagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EVE.Data" minOccurs="0" name="GetExhibitBookmark_CaseTagResult" nillable="true" type="q12:ExhibitBookmarkList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_CaseTagCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="caseId" type="xs:int" />
+        <xs:element minOccurs="0" name="bookmarkTagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExhibitBookmark_CaseTagCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExhibitBookmark_CaseTagCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
